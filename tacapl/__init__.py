@@ -3,6 +3,7 @@ commands = ["print", "set", "add", "subtract", "multiply", "divide", "if", "end"
 op_one = ""
 op_two = ""
 
+
 class Interpreter:
     def __init__(self):
         self.variables = {}
