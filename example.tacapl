@@ -1,5 +1,6 @@
 input answer = "What do you want? ";
-ifstr var:answer == "grape";
+set grape = "grape";
+if answer == grape;
 print "I like those too";
 end;
 printsent "You want ";
