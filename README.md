@@ -35,6 +35,9 @@ If you only have the library installed, this would be your code:
 
 `printsent <whattoprint>` - Same as `print` but without a new line
 
+### Explained Later:
+`if <condition>` and `end`: These commands go hand in hand, if the condition is true, nothing happens, but if the condition is false, no code will run until the statement that says `end`.
+
 ### Conventions:
 Every line but the last line must end in a semicolon.
 
