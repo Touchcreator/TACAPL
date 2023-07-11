@@ -1,0 +1,7 @@
+input answer = "What do you want? ";
+ifstr var:answer == "grape";
+print "I like those too";
+end;
+printsent "You want ";
+printsent answer;
+printsent "?"
