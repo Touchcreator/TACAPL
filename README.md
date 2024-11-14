@@ -17,21 +17,21 @@ If you only have the library installed, this would be your code:
 ### Commands:
 `print <whatto print>` - Self explanatory
 
-`set <variable> = <value>` - Sets a variable
+`set <var> = <value>` - Sets a variable
 
-`add <num1> + <num2>` - Self explanatory
+`add <var> = <num1> + <num2>` - Self explanatory
 
-`subtract <num1> - <num2>` - Self explanatory
+`subtract <var> = <num1> - <num2>` - Self explanatory
 
-`multiply <num1> * <num2>` - Self explanatory
+`multiply <var> = <num1> * <num2>` - Self explanatory
 
-`divide <num1> / <num2>` - Self explanatory
+`divide <var> = <num1> / <num2>` - Self explanatory
 
 `if <condition>` - This will be explained later
 
 `end` - This will be explained later
 
-`input <variable> = "<question>"` - Sets the variable to the user's input
+`input <var> = "<question>"` - Sets the variable to the user's input
 
 `printsent <whattoprint>` - Same as `print` but without a new line
 
