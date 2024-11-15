@@ -139,5 +139,5 @@ class Interpreter:
             value = " ".join(tokens[3:])  # Combine all tokens after 'set variable =' as the value
             self.variables[variable] = input(value[1:-1])
         elif tokens[0] not in commands:
-            print("Error at \"" + statement + "\" Statement " + str(statenum) + ". Maybe it's a typo or a missing semicolon?")
+            print("\n\nError at \"" + statement + "\" , Statement " + str(statenum) + ". Maybe it's a typo or a missing semicolon?\n")
             exit()
