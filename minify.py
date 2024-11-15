@@ -11,7 +11,7 @@ newThingAgain = ""
 
 for item in newThing:
     if item != "\n":
-        newThingAgain+=item
+        newThingAgain += item
 
 new.write(newThingAgain)
 
