@@ -1,0 +1,19 @@
+set test = "9";
+set newVariable = "10";
+
+add ninePlusTen = test + newVariable;
+
+print "Sorry for this programming language being so bad";
+print "Might needa redo it";
+print "Also whats 9 + 10?";
+
+printsent "It's ";
+printsent ninePlusTen;
+print "!";
+
+print "No... It's literally 21 you idiot";
+print "Why do you need a decimal after everything anyway";
+
+print "Might needa change that!";
+
+print ""TACAPL rebirth" ahh"
