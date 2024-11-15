@@ -1,10 +1,22 @@
 skip_code = False
 commands = ["print", "set", "add", "subtract", "multiply", "divide", "if", "end", "input", "printsent", "ifstr"]
-op_one = ""
+equalsCommands = ["set", "add", "subtract", "multiply", "divide", "input"]
 op_two = ""
 
 
 class Interpreter:
+    def error(self, statement):
+        print("\n\nError at \"" + str(statement) + "\" , Statement " + str(statenum) + ". Maybe it's a typo or a missing semicolon?\n")
+        exit()
+    
+    def equalError(self, statement):
+        print("\n\nError at \"" + str(statement) + "\" , Statement " + str(statenum) + ". You need an equals sign when you're changing or setting variables.\n")
+        exit()
+
+    def ifError(self, statement):
+        print("\n\nError at \"" + str(statement) + "\" , Statement " + str(statenum) + ". Your operation is not a possible operation choice\n")
+        exit()
+
     def __init__(self):
         self.variables = {}
 
@@ -26,7 +38,9 @@ class Interpreter:
             command = ""
 
         commands = ["print", "set", "add", "subtract", "multiply", "divide", "if", "end", "input", "printsent", "ifstr"]
-
+        if command in equalsCommands:
+            if tokens[2] != "=":
+                self.equalError(statement)
         if command == "print":
             value = " ".join(tokens[1:])  # Combine all tokens after 'print' as the value
             if value.startswith('"') and value.endswith('"'):
@@ -132,6 +146,8 @@ class Interpreter:
                 skip_code = not (op_one == op_two)
             elif operation == "!=":
                 skip_code = not (op_one != op_two)
+            else:
+                self.ifError(statement)
         elif command == "end":
             skip_code = False
         elif command == "input":
@@ -139,5 +155,4 @@ class Interpreter:
             value = " ".join(tokens[3:])  # Combine all tokens after 'set variable =' as the value
             self.variables[variable] = input(value[1:-1])
         elif tokens[0] not in commands:
-            print("\n\nError at \"" + statement + "\" , Statement " + str(statenum) + ". Maybe it's a typo or a missing semicolon?\n")
-            exit()
+            self.error(statement)
